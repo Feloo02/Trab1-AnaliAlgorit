@@ -4,62 +4,57 @@
 
 using namespace std;
 
-void multimatri(int a[][], int b[][], int c[][], int n)
+int main()
 {
-    int i,j;
-    for(i=0,i<n,i++)
-    {
-        for(j=0,j<n,j++)
-        {
-            //falta el procedimiento de multiplicacion
+    int n;
+    int matriz1[1][1];
+    int matriz2[1][1];
+    int matrizR[1][1];
+
+    cout << "Inicio" << endl;
+    cout << "Ingrese tamaño de las matrices" << endl;
+    cin >> n;
+    matriz1[n][n];
+    matriz2[n][n];
+    int n2=n*n;
+
+    cout << "Las matrices tendran ingresados numeros aleatorios del 1 al 100" << endl;
+
+    // Se rellena la matriz 1
+    for(int i=0; i<n; i++){
+        for(int j=0 ;j<n; j++){
+            //int x=1+rand()%(101-1);
+            matriz1[i][j] = 1;
         }
     }
-}
 
-void llenar(int a[][])
-{
-    int i,j,x;
-    for(i=0,i<n,i++)
-    {
-        for(j=0,j<n,j++)
-        {
-            x=1+rand()%(101-1);
-            a[i][j] = x;
+    // Se rellena la matriz 2
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
+            //int y=1+rand()%(101-1);
+            matriz2[i][j] = 2;
         }
     }
-}
 
-void mostrar(int a[][])
-{
-    int i,j;
-    for(i=0,i<n,i++)
-    {
-        for(j=0,j<n,j++)
-        {
-            cout << a[i][j] << "";
+    cout << "Ahora se mostraran las matrices" << endl;
+
+    cout << "Matriz 1" << endl;
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
+            cout << matriz1[i][j] << "";
         }
         cout << "" << endl;
     }
-}
 
-int main()
-{
-    cout << "Inicio" << endl;
-    int n;
-    cout << "Ingrese tamaño de las matrices" << endl;
-    cout << "Las matrices tendran ingresados numeros aleatorios del 1 al 100" << endl;
-    cin >> n;
-    int matriz1[n][n];
-    int matriz2[n][n];
-    llenar(matriz1);
-    llenar(matriz2);
-    cout << "Ahora se mostraran las matrices" << endl;
-    mostrar(matriz1);
-    mostrar(matriz2);
+    cout << "Matriz 2" << endl;
+    for(int i=0; i<n; i++) {
+        for(int j=0; j<n; j++){
+            cout << matriz2[i][j] << "";
+        }
+        cout << "" << endl;
+    }
+
     cout << "Ahora se realizara la multiplicacion de matrices" << endl;
-    int matriz3[n][n];
-    multimatri(matriz1,matriz2,matriz3);
-    mostrar(matriz3);
     cout << "bye" << endl;
     return 0;
 }
