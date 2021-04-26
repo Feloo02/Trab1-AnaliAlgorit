@@ -41,7 +41,7 @@ int main()
     cout << "Matriz 1" << endl;
     for(int i=0; i<n; i++){
         for(int j=0; j<n; j++){
-            cout << matriz1[i][j] << "";
+            cout << "[" <<matriz1[i][j] << "]" << "";
         }
         cout << "" << endl;
     }
@@ -49,12 +49,29 @@ int main()
     cout << "Matriz 2" << endl;
     for(int i=0; i<n; i++) {
         for(int j=0; j<n; j++){
-            cout << matriz2[i][j] << "";
+            cout << "[" <<matriz2[i][j] << "]" << "";
         }
         cout << "" << endl;
     }
 
     cout << "Ahora se realizara la multiplicacion de matrices" << endl;
+
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
+            for(int z=0; z<n; z++){
+                matrizR[i][j]+= matriz1[i][z]+matriz2[z][j];
+            }
+        }
+    }
+
+    cout << "Matriz Resultante" << endl;
+    for(int i=0; i<n; i++) {
+        for(int j=0; j<n; j++){
+            cout << "[" <<matrizR[i][j] << "]" << "";
+        }
+        cout << "" << endl;
+    }
+
     cout << "bye" << endl;
     return 0;
 }
