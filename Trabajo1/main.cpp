@@ -10,7 +10,7 @@ int main()
     int matriz2[100][100];
     int matrizR[100][100];
 
-    int n=4; // n definira la dimension de ambas matrices cuadradas
+    int n=99999999999999; // n definira la dimension de ambas matrices cuadradas
 
     matriz1[n][n];
     matriz2[n][n];
