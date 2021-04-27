@@ -6,72 +6,72 @@ using namespace std;
 
 int main()
 {
-    int n;
-    int matriz1[1][1];
-    int matriz2[1][1];
-    int matrizR[1][1];
+    int matriz1[100][100];
+    int matriz2[100][100];
+    int matrizR[100][100];
 
-    cout << "Inicio" << endl;
-    cout << "Ingrese tamaño de las matrices" << endl;
-    cin >> n;
+    int n=4; // n definira la dimension de ambas matrices cuadradas
+
     matriz1[n][n];
     matriz2[n][n];
-    int n2=n*n;
+    matrizR[n][n];
 
-    cout << "Las matrices tendran ingresados numeros aleatorios del 1 al 100" << endl;
+    cout << "\nLas matrices tendran ingresados numeros aleatorios del 1 al 100" << endl;
+
+    srand(time(NULL));
 
     // Se rellena la matriz 1
     for(int i=0; i<n; i++){
         for(int j=0 ;j<n; j++){
-            //int x=1+rand()%(101-1);
-            matriz1[i][j] = 1;
+            int x=1+rand()%(101-1);
+            matriz1[i][j] = x;
         }
     }
 
     // Se rellena la matriz 2
     for(int i=0; i<n; i++){
         for(int j=0; j<n; j++){
-            //int y=1+rand()%(101-1);
-            matriz2[i][j] = 2;
+            int y=1+rand()%(101-1);
+            matriz2[i][j] = y;
         }
     }
 
-    cout << "Ahora se mostraran las matrices" << endl;
+    cout << "Ahora se mostraran las matrices\n" << endl;
 
-    cout << "Matriz 1" << endl;
+    cout << "Matriz 1\n" << endl;
     for(int i=0; i<n; i++){
         for(int j=0; j<n; j++){
-            cout << "[" <<matriz1[i][j] << "]" << "";
+            cout<<matriz1[i][j]<<" ";
         }
-        cout << "" << endl;
+        cout<<" "<<endl;
     }
 
-    cout << "Matriz 2" << endl;
+    cout << "\nMatriz 2\n" << endl;
     for(int i=0; i<n; i++) {
         for(int j=0; j<n; j++){
-            cout << "[" <<matriz2[i][j] << "]" << "";
+            cout<<matriz2[i][j]<<" ";
         }
-        cout << "" << endl;
+        cout<<" "<<endl;
     }
 
-    cout << "Ahora se realizara la multiplicacion de matrices" << endl;
+    cout << "Ahora se realizara la multiplicacion de matrices\n" << endl;
 
     for(int i=0; i<n; i++){
         for(int j=0; j<n; j++){
             for(int z=0; z<n; z++){
-                matrizR[i][j]+= matriz1[i][z]+matriz2[z][j];
+                matrizR[i][j]+= matriz1[i][z]*matriz2[z][j];
             }
         }
     }
 
-    cout << "Matriz Resultante" << endl;
+    cout << "\nMatriz Resultante\n" << endl;
     for(int i=0; i<n; i++) {
         for(int j=0; j<n; j++){
-            cout << "[" <<matrizR[i][j] << "]" << "";
+            cout<<matrizR[i][j]<<" ";
         }
-        cout << "" << endl;
+        cout << " " << endl;
     }
 
-    cout << "bye" << endl;
+    cout << "\nbye" << endl;
     return 0;
 }
