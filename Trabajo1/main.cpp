@@ -17,7 +17,7 @@ int main()
     matriz2[n][n];
     matrizR[n][n];
 
-    cout << "\nLas matrices tendran ingresados numeros aleatorios del 1 al 100" << endl;
+    cout << "\nLas matrices tendran ingresados numeros aleatorios del 1 al 10" << endl;
 
     srand(time(NULL)); // variable de tiempo para que los numeros sean realmente aleatorios
 
