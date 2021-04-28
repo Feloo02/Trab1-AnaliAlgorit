@@ -6,18 +6,17 @@ using namespace std;
 
 int main()
 {
+    int matriz1[415][415];
+    int matriz2[415][415];
+    int matrizR[415][415];
 
-    int n=45; // n definira la dimension de ambas matrices cuadradas ( un n mayor a 415 crashea el programa)
-
-    int matriz1[n][n];
-    int matriz2[n][n];
-    int matrizR[n][n];
+    int n=43; // n definira la dimension de ambas matrices cuadradas ( un n mayor a 415 crashea el programa)
 
     matriz1[n][n];
     matriz2[n][n];
     matrizR[n][n];
 
-    cout << "\nLas matrices tendran ingresados numeros aleatorios del 1 al 10" << endl;
+    cout << "\nLas matrices tendran ingresados numeros aleatorios del 1 al 100" << endl;
 
     srand(time(NULL)); // variable de tiempo para que los numeros sean realmente aleatorios
 
